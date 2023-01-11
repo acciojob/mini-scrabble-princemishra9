@@ -1,8 +1,9 @@
-//your code here
-const textbox = document.getElementId("evaluatedText");
-const lettercount = document.getElementId("letterCount");
-textbox.addEventListener('input', () => {
-    const letterCount = textbox.value.length;
-
-    letterCountElement.textContent = letterCount;
+ 
+let count;
+document.getElementById("evaluatedText").value = ""; // initially string is empty so count is also empty
+ 
+document.addEventListener("keyup", function () {
+  count = document.getElementById("evaluatedText").value; //here this value will return string
+  document.querySelector("#letterCount").textContent = count.length;
+  //   console.log(count);
 });
